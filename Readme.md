@@ -1,5 +1,6 @@
 Currency Tracker API
 Асинхронный backend-сервис для отслеживания курсов валют с API Центрального банка РФ с поддержкой WebSocket-уведомлений и интеграцией с NATS.
+
 Выполнил: Горьков Владислав Дмитриевич РИ-330931
 
 
@@ -23,7 +24,9 @@ docker-compose up -d
 ## 3. Запуск приложения
 # Запуск сервера с autoreload
 uvicorn app.main:app --reload
+
 Доступные endpoints
+
 REST API
 
 GET / - Информация о API
@@ -48,7 +51,9 @@ WebSocket
 ws://localhost:8000/ws/items - WebSocket для real-time уведомлений
 
 Мониторинг
+
 Документация API: http://localhost:8000/docs
+
 NATS мониторинг: http://localhost:8222
 
 #Тестирование WebSocket
@@ -60,3 +65,4 @@ python debug_websocket.py
 ping - проверка соединения
 
 status - получение статистики системы
+
